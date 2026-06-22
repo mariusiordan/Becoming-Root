@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <meta name="description" content="The distribution I chose to study RHCSA on, and why Rocky Linux — a bug-for-bug RHEL rebuild — won out over AlmaLinux, CentOS Stream, and paid RHEL.">
+  <title>Installing Rocky Linux (and Why I Picked Rocky) — Becoming Root</title>
+</head>
+<body class="post">
+
+  <!-- SITE HEADER -->
+  <header>
+    <p><a href="../index.html">Becoming Root</a></p>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../categories.html">Categories</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT: the full blog post -->
+  <main>
+    <article>
+      <h1>Installing Rocky Linux (and Why I Picked Rocky)</h1>
+      <p>
+        Published on <time datetime="2026-06-15">15 June 2026</time>
+        in <strong>Linux</strong>
+      </p>
+      <img src="../images/rocky.png"
+           alt="A Linux installer screen part-way through setting up a new system"
+           width="800" height="360">
+
+      <p>
+        With RHCSA as the target, I needed a lab to practise on. The exam runs
+        on Red Hat Enterprise Linux, but RHEL is a paid, subscription product.
+        So which distribution should I actually install to learn on? I went with
+        <strong>Rocky Linux</strong>.
+      </p>
+
+      <h2>The contenders</h2>
+      <p>There were a few realistic options:</p>
+      <ul>
+        <li><strong>RHEL itself</strong> — the real thing, free for individuals through the Red Hat Developer subscription.</li>
+        <li><strong>Rocky Linux</strong> — a free, community-built rebuild of RHEL.</li>
+        <li><strong>AlmaLinux</strong> — another free RHEL rebuild, very close to Rocky.</li>
+        <li><strong>CentOS Stream</strong> — sits just <em>ahead</em> of RHEL rather than tracking it exactly.</li>
+      </ul>
+
+      <h2>Why Rocky</h2>
+      <p>
+        Rocky Linux is a <strong>bug-for-bug compatible</strong> rebuild of
+        RHEL. In practice that means the package manager, the file paths, the
+        SELinux defaults, and the systemd behaviour all match what I'll see on
+        the exam and in a real RHEL environment. It is also completely free with
+        no subscription to manage, which makes spinning lab machines up and
+        tearing them down painless.
+      </p>
+      <p>
+        There's some history behind it, too. When Red Hat moved CentOS to the
+        "Stream" model, Gregory Kurtzer — one of the original CentOS founders —
+        started Rocky Linux to keep a faithful, downstream RHEL clone alive.
+        That lineage is exactly why it tracks RHEL so closely.
+      </p>
+      <blockquote>
+        Learn on the closest free thing to the real exam, then sanity-check on
+        the real thing before exam day.
+      </blockquote>
+      <p>
+        I still keep one real RHEL 9 machine from the Developer subscription for
+        final exam-environment familiarity, but for day-to-day labbing, Rocky is
+        what I reach for.
+      </p>
+
+      <h2>Setting it up</h2>
+      <p>
+        I'm running the lab on my Proxmox homelab, which lets me create a clean
+        Rocky VM in minutes, snapshot it, break it, and roll back. The next step
+        is building a reusable template so every practice session starts from an
+        identical, known-good system — but that is a post for another day.
+      </p>
+
+      <p><a href="../index.html">&larr; Back to all posts</a></p>
+    </article>
+  </main>
+
+  <!-- PAGE FOOTER -->
+  <footer>
+    <p>
+      Get in touch:
+      <a href="mailto:hello@bytesandbuilds.example">hello@bytesandbuilds.example</a>
+    </p>
+    <p>
+      Find me on
+      <a href="https://github.com/mariusiordan">GitHub</a> and
+      <a href="https://www.linkedin.com/in/mariusiordan">LinkedIn</a>.
+    </p>
+    <p>&copy; 2026 Becoming Root. Built as a learning project.</p>
+  </footer>
+
+</body>
+</html>
